@@ -1,0 +1,535 @@
+.section {
+    position: relative;
+    overflow: hidden;
+}
+
+.section.active {}
+
+#section1 {}
+
+.fp-bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: " ";
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+#section1 .fp-bg {
+    background: rgba(0, 162, 255, 0.35);
+    background: linear-gradient(to bottom, rgba(0, 162, 255, 0.35) 0%, #6e329b 100%);
+}
+
+#section2 {
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-color: rgb(110, 50, 155);
+    background-image: url(https://4etherapeutics.com/wp-content/uploads/2021/10/molecule-bg-01.svg);
+    background-size: cover;
+}
+
+#section2 .fp-bg {}
+
+#section3 {
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-color: rgb(46, 48, 73);
+    background-image: url(https://4etherapeutics.com/wp-content/uploads/2021/10/alt-7.jpg);
+    background-size: cover;
+}
+
+#section3 .fp-bg {
+    background: #2e3049;
+    background: radial-gradient(50% 50% at 50% 50%, #2e3049 0%, rgba(46, 48, 73, 0.9) 100%);
+    opacity: 0.95;
+}
+
+#section4 {
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-color: rgb(0, 162, 255);
+    background-image: url(https://4etherapeutics.com/wp-content/uploads/2021/10/migrain-bg.jpg);
+}
+
+#section4 .fp-bg {
+    background: rgba(0, 162, 255, 0.95);
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 162, 255, 0.95) 0%, rgba(0, 162, 255, 0.8) 100%);
+    opacity: 1;
+}
+
+#section5 {
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-color: rgb(255, 157, 0);
+    background-image: url(https://4etherapeutics.com/wp-content/uploads/2021/10/molecule-bg.jpg);
+}
+
+#section5 .fp-bg {
+    background: rgba(255, 157, 0, 0.95);
+    background: linear-gradient(90deg, rgba(255, 157, 0, 0.95) 0%, rgba(255, 157, 0, 0.75) 100%);
+    opacity: 1;
+}
+
+#section6 {
+    background-color: #6e329b;
+}
+
+#section6 .fp-bg {
+    background: #6e329b;
+    background: linear-gradient(135deg, #6e329b 0%, #522070 100%);
+    opacity: 1;
+}
+
+.section-content {
+    /*border:1px solid #F00;*/
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+    height: 100vh;
+}
+
+
+/* content-pos */
+
+.content-pos {
+    position: absolute;
+    bottom: 0;
+    z-index: 99;
+    padding: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1440px;
+}
+
+.content-pos h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 56px;
+    line-height: 64px;
+    font-weight: 200;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 0;
+    transition: 2s;
+    animation-duration: 2s;
+}
+
+.section.active .content-pos h3 {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.arrow {}
+
+.arrow p {
+    text-align: left;
+    color: #00a6ff;
+    font-family: 'Raleway';
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.arrow p:hover {}
+
+.arrow p:hover span {
+    width: 35px;
+}
+
+.arrow p span {
+    width: 25px;
+    height: 1px;
+    background: #00a6ff;
+    display: inline-block;
+    margin-right: 10px;
+    transition: .5s;
+}
+
+.progress {
+    background-color: rgb(0 0 0 / 25%);
+    border-radius: 0;
+    position: relative;
+    margin: 0;
+    height: 14px;
+    width: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.progress-done {
+    background: #00a2ff;
+    border-radius: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 0;
+    opacity: 1;
+    transition: 1s ease 0.3s;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.progress-done.bg-5 {
+    background: #6e329b;
+}
+
+.progress-done.bg-4 {
+    background: #2e3049;
+}
+
+.progress-done.bg-3 {
+    background: #00a2ff;
+}
+
+.progress-done.bg-1 {
+    background: #00a2ff;
+}
+
+.content-sec {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: auto;
+    max-width: 1170px;
+}
+
+.content-pos.content-sec h4 {
+    font-family: Raleway;
+    text-transform: none;
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.content-pos.content-sec svg {}
+
+.section.active svg.animate__animated,
+.section.active h4 {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.content-pos.content-sec svg path {
+    fill: #fff;
+}
+
+.content-sec .box-heading {
+    margin-top: 30px;
+}
+
+.content-sec .box-heading .row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.content-sec .box-heading .row .col {}
+
+.content-sec .box-heading .row .col4 {
+    width: 25%;
+}
+
+.content-sec .box-heading .row .col4 h3 {
+    text-align: left;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.content-sec .box-heading .row .col4 h4 {
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Raleway';
+    padding: 0;
+    margin: 0;
+}
+
+.content-sec .box-heading .row .col8 {
+    width: 75%;
+}
+
+.content-sec .box-heading .row .col8 p {
+    font-family: roboto;
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.content-sec .box-heading .row .col8 .progress {}
+
+.content-sec .box-heading .row .col8 .arrow-sec {
+    float: right;
+}
+
+.content-sec .box-heading .row .col8 .arrow-sec a {
+    color: #00a2ff;
+    font-size: 16px;
+    font-family: 'Raleway';
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -5px;
+    transition: .5s;
+}
+
+.content-sec .box-heading .row .col8 .arrow-sec a:hover {
+    left: 0;
+}
+
+.content-sec .box-heading .row .col8 .arrow-sec a:hover span {
+    width: 30px;
+}
+
+.content-sec .box-heading .row .col8 .arrow-sec a span {
+    width: 25px;
+    height: 1px;
+    background: #00a2ff;
+    display: inline-block;
+    margin-right: 10px;
+    transition: .5s;
+}
+
+.content-sec .box-heading .row .col8 .progress .progress-done {}
+
+.content-sec .box-heading ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.content-sec .box-heading ul li {
+    list-style: none;
+    color: #fff;
+    font-family: roboto;
+    font-size: 16px;
+}
+
+.content-sec .box-heading ul li:first-child {
+    width: 13%;
+}
+
+.content-sec h3 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.line {
+    width: 0;
+    height: 0.5px;
+    margin-bottom: 40px;
+    background: #fff;
+    transition: 2s;
+}
+
+.section.active .line {
+    width: 100%;
+}
+
+.para-p {
+    margin-top: 15px;
+}
+
+.para-p p {}
+
+.content-pos.content-sec .para-p h4 {
+    font-family: Raleway;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.row .col4 {
+    width: 25%;
+}
+
+.row .col8 {
+    width: 75%;
+}
+
+.right-text p {
+    font-size: 19px;
+    color: #fff;
+    font-family: roboto;
+}
+
+.right-text p span {
+    color: #00a2ff;
+}
+
+.publications {
+    position: relative;
+    z-index: 9;
+    width: 100%;
+}
+
+.publications h1 {
+    font-family: Raleway;
+    font-size: 44px;
+    line-height: 54px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.publications .row {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.publications .row .col {
+    width: 30%;
+}
+
+.box-se {
+    margin-bottom: 60px;
+    border: 1px solid #fff;
+    padding: 45px 40px;
+    text-align: center;
+    min-height: 268px;
+}
+
+.box-se p {
+    font-size: 16px;
+    font-family: roboto;
+    font-style: italic;
+    color: #fff;
+    margin: 0;
+    margin-bottom: 14px;
+}
+
+.box-se h4 {
+    font-family: Raleway;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+}
+
+.box-se h3 {
+    font-family: Raleway;
+    text-transform: none;
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.box-se h3 span {}
+
+.box-se h2 {
+    font-family: Raleway;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.box-se a.btn-download {
+    background: #00a2ff;
+    color: #fff;
+    padding: 15px 42px;
+    border-radius: 35px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: Raleway;
+    text-transform: uppercase!important;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: .5s;
+    width: 166px;
+    position: relative;
+}
+
+.box-se a.btn-download span {
+    position: relative;
+    left: 12px;
+    transition: .5s;
+}
+
+.box-se a.btn-download:hover {
+    background: #007dc5;
+    transition: .5s;
+}
+
+.box-se a.btn-download:hover span {
+    left: -5px;
+}
+
+.box-se a.btn-download:hover i.fa {
+    opacity: 1;
+    left: 5px;
+}
+
+.box-se a.btn-download i.fa {
+    opacity: 0;
+    position: relative;
+    transition: .5s;
+    left: 0;
+}
+
+#section7 {
+    height: 50vh;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.box-content {}
+
+.box-content p {
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 100;
+    color: #ccc;
+}
+
+.box-content p span {
+    color: #000;
+}
+
+#footer {
+    height: 70vh;
+    padding: 100px 0 0;
+}
+
+#fp-nav ul li:last-child {
+    display: none;
+}
